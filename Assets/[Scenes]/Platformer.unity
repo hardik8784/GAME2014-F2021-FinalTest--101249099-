@@ -4054,7 +4054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.96, y: -0.53}
+  m_AnchoredPosition: {x: 81.77, y: -0.53}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &554017808
@@ -5188,7 +5188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720188938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.1, y: 0, z: 0}
+  m_LocalPosition: {x: 88.909996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1675891084}
@@ -22035,6 +22035,12 @@ MonoBehaviour:
   platformTimer: 0
   threshold: 0.1
   player: {fileID: 0}
+  ShrinkTimeElapsed: 4
+  ShrinkTime: 4
+  Platform_Position: {x: 0, y: 0, z: 0}
+  ScalingFactor: 0
+  isActive: 0
+  isExpanding: 0
 --- !u!114 &1232213705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23696,6 +23702,12 @@ MonoBehaviour:
   platformTimer: 0
   threshold: 0.1
   player: {fileID: 0}
+  ShrinkTimeElapsed: 0
+  ShrinkTime: 4
+  Platform_Position: {x: 0, y: 0, z: 0}
+  ScalingFactor: 0
+  isActive: 0
+  isExpanding: 0
 --- !u!114 &1511477546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24325,6 +24337,12 @@ MonoBehaviour:
   platformTimer: 0
   threshold: 0.1
   player: {fileID: 0}
+  ShrinkTimeElapsed: 0
+  ShrinkTime: 4
+  Platform_Position: {x: 0, y: 0, z: 0}
+  ScalingFactor: 0
+  isActive: 0
+  isExpanding: 0
 --- !u!1 &1675891083
 GameObject:
   m_ObjectHideFlags: 0
