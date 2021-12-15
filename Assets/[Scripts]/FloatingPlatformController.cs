@@ -107,7 +107,7 @@ public class FloatingPlatformController : MonoBehaviour
     {
         ShrinkTimeElapsed += Time.deltaTime;
         ScalingFactor = ShrinkTimeElapsed / ShrinkTime;
-
+        transform.position = start.transform.position;          //Platform Expands from it's original position,Not somewhere else
 
         TempScale = transform.localScale;
         TempScale.x = ScalingFactor;
