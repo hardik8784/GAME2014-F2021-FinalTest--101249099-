@@ -7,6 +7,7 @@
  * Revision History : v0.1 > Added Same Behaviour and Mechanics as Moving Platforms
  *                    v0.2 > Added Shrinking and Expanding Functionality implemented with Player's Events
  *                    v0.3 > Check Player Collides with the Platform then Shrink otherwise Expand,if not both then Float
+ *                    v0.4 > Added Impulse Sound for Shrinking and Expanding 
  */
 
 using System.Collections;
@@ -45,12 +46,20 @@ public class FloatingPlatformController : MonoBehaviour
     [SerializeField] private bool isActive;
     [SerializeField] private bool isExpanding;
 
+    // Sound effects
+    [Header("Impulse Sounds")]
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private List<AudioClip> AudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerBehaviour>();
 
         BoxCollider = GetComponent<BoxCollider2D>();
+
+        AudioSource = GetComponent<AudioSource>();
+
         Platform_Position = transform.position;
         BoxColliderScale = BoxCollider.size;
         platformTimer = 0.1f;
@@ -133,13 +142,17 @@ public class FloatingPlatformController : MonoBehaviour
             isExpanding = false;
         }
 
+        AudioSource.clip = AudioClip[0];
+        AudioSource.Play();
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)   ////Check the Player move somewhere else from Platform 
     {
         isActive = false;
         isExpanding = true;
-
+        AudioSource.clip = AudioClip[1];
+        AudioSource.Play();
     }
 
 
